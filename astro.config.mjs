@@ -17,7 +17,7 @@ const locales = LOCALES;
 // https://astro.build/config
 export default defineConfig({
 	site: SITE_URL,
-	output: "hybrid",
+	output: "server",
 	trailingSlash: "always",
 	build: {
 		format: "directory",
