@@ -6,7 +6,7 @@ backend:
     name: github
     branch: main
     repo: Frikadellios/Astro4NewYear
-    site_domain: https://devopsick.pages.dev
+    site_domain: devopsick.pages.dev
     base_url: https://devopsick.pages.dev
     auth_endpoint: oauth
     automatic_deployments: true
@@ -18,7 +18,8 @@ i18n:
     structure: "multiple_folders"
     locales:
         - "en"
-        - "it"
+        - "ru"
+        - "uk"
     default_locale: "en"
 
 collections:
@@ -31,24 +32,36 @@ collections:
       create: true
       delete: true
       fields:
-          - name: "title"
-            widget: "string"
-            label: "Post Title"
-            i18n: true
-          - label: "Description"
-            name: "description"
-            widget: "string"
-            i18n: true
-          - label: "Publish Date"
-            name: "pubDate"
-            widget: "datetime"
-            format: "YYYY-MM-DD HH:mm"
-            i18n: "duplicate"
-          - label: "Image"
-            name: "heroImage"
-            widget: "image"
-            i18n: "duplicate"
-          - name: "body"
-            widget: "markdown"
-            label: "Post Body"
-            i18n: true
+          - { name: "title", widget: "string", label: "Post Title", i18n: true }
+          - { label: "Description", name: "description", widget: "string", i18n: true }
+          - { label: "Publish Date", name: "pubDate", widget: "datetime", format: "YYYY-MM-DD HH:mm", i18n: "duplicate" }
+          - { label: "Image", name: "heroImage", widget: "image", i18n: "duplicate" }
+          - { name: "body", widget: "markdown", label: "Post Body", i18n: true }
+    - name: "post" # Used in routes, e.g., /admin/collections/blog
+      i18n: true
+      label: "Post" # Used in the UI
+      folder: "src/content/post" # The path to the folder where the documents are stored
+      create: true # Allow users to create new documents in this collection
+      media_folder: /src/assets/images/post # Specific media folder for the collection
+      public_folder: "@assets/images/post" # Specific public assets folder for the collection
+      preview_path_date_field: "date"
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+      fields: # The fields for each document, usually in front matter
+          - { label: "Title", name: "title", widget: "string",  i18n: true }
+          - { label: "Publish Date", name: "date", widget: "datetime",  i18n: "duplicate" }
+          - { label: "Featured Image", name: "img", widget: "image",  i18n: "duplicate" }
+          - { label: "Body", name: "body", widget: "markdown",  i18n: true}
+    - name: "authors" # Used in routes, e.g., /admin/collections/blog
+      i18n: true
+      label: "Authors" # Used in the UI
+      folder: "src/content/authors" # The path to the folder where the documents are stored
+      create: true # Allow users to create new documents in this collection
+      media_folder: /src/assets/images/authors # Specific media folder for the collection
+      public_folder: "@assets/images/authors" # Specific public assets folder for the collection
+      preview_path_date_field: "date"
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+      fields: # The fields for each document, usually in front matter
+          - { label: "Name", name: "name", widget: "string",  i18n: true}
+          - { label: "Publish Date", name: "date", widget: "datetime",  i18n: "duplicate" }
+          - { label: "Photo", name: "img", widget: "image",  i18n: "duplicate" }
+          - { label: "Description", name: "body", widget: "markdown", required: false,  i18n: true }
