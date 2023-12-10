@@ -17,6 +17,18 @@
     "skipLibCheck": true,
     "composite": true,
     "downlevelIteration": true,
-    "allowSyntheticDefaultImports": true
-  }
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "src",
+		"paths": {
+			"@src/*": ["*"],
+			"@lib/*": ["lib/*"],
+			"@components/*": ["components/*"],
+			"@layouts/*": ["layouts/*"],
+			"@styles/*": ["styles/*"],
+			"@utils/*": ["utils/*"],
+			"@pages/*": ["pages/*"],
+			"@assets/*": ["assets/*"],
+			"@locales/*": ["locales/*"]
+		}
+	}
 }

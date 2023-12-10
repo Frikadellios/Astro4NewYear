@@ -19,3 +19,12 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# Language directories to ignore
+astro_tmp_pages_*
+
+# Local Netlify folder
+.netlify
+
+# Service Worker
+dev-dist/
