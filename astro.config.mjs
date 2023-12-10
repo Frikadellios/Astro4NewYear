@@ -3,7 +3,6 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import sveltiaCms from "astro-sveltia-cms";
 import react from "@astrojs/react";
-import node from "@astrojs/node";
 
 import cloudflare from "@astrojs/cloudflare";
 
