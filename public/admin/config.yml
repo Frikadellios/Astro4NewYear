@@ -7,7 +7,7 @@ backend:
     branch: main
     repo: Frikadellios/Astro4NewYear
     site_domain: devopsick.pages.dev
-    base_url: https://devopsick.pages.dev
+    base_url: https://devopsick.pages.dev/
     auth_endpoint: oauth
     automatic_deployments: true
 
