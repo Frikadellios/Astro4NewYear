@@ -1,0 +1,7 @@
+backend:
+  name: github
+  branch: main # change this to your branch
+  repo: majesticostudio/astro-sveltia-cms # change this to your repo
+  site_domain: astro-sveltia-cms.vercel.app # change this to your domain
+  base_url: https://astro-sveltia-cms.vercel.app # change this to your prod URL
+  auth_endpoint: oauth # the oauth route provided by the integration
