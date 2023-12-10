@@ -13,21 +13,4 @@ const blog = defineCollection({
 		}),
 });
 
-const post = defineCollection({
-	schema: ({ image }) =>
-		z.object({
-			title: z.string(),
-			date: z.coerce.date(),
-			img: image(),
-		}),
-});
-
-const authors = defineCollection({
-	schema: ({ image }) =>
-		z.object({
-			name: z.string(),
-			img: image(),
-		}),
-});
-
-export const collections = { blog, post, authors };
+export const collections = { blog };
