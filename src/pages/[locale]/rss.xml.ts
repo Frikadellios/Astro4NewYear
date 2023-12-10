@@ -56,3 +56,5 @@ export const get: APIRoute = async function get({ params, redirect, site }) {
 		statusText: "OK",
 	});
 };
+
+export const prerender = true;

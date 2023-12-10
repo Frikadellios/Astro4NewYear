@@ -1,7 +1,14 @@
 {
-  "name": "",
+  "name": "astro4newyear",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.13.4",
+  "description": "Astro and comments",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Frikadellios/Astro4NewYear.git"
+  },
+  "homepage": "https://github.com/Frikadellios/Astro4NewYear",
   "scripts": {
     "dev": "astro check && astro dev",
     "start": "astro dev",
@@ -37,7 +44,7 @@
     "react-dom": "^18.0.0",
     "sharp": "^0.33.0",
     "tailwindcss": "^3.0.24",
-    "typescript": "^5.3.3",
+    "typescript": "latest",
     "workbox-window": "^7.0.0"
   },
   "trustedDependencies": [
